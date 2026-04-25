@@ -1,0 +1,404 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 940" width="1600" height="940" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#b91c1c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arr-msg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#777" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Page background -->
+  <rect width="1600" height="940" fill="#f2f2f0" rx="10"/>
+
+  <!-- Title block -->
+  <rect x="20" y="10" width="1560" height="46" rx="6" fill="#1e3a5f" />
+  <text x="800" y="29" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">BPMN — Processo AS-IS: Gestão de Solicitações Internas (sem sistema digital)</text>
+  <text x="800" y="46" text-anchor="middle" font-size="10" fill="#aac4e8">TechCorp Solutions · Evidencia os problemas operacionais atuais e a exclusão de stakeholders estratégicos</text>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       POOL OUTER BORDER
+  ════════════════════════════════════════════════════════════ -->
+  <rect x="20" y="62" width="1560" height="862" rx="6" fill="none" stroke="#888" stroke-width="2"/>
+  <!-- Pool label -->
+  <rect x="20" y="62" width="38" height="862" rx="6" fill="#c9d4e8" stroke="#888" stroke-width="2"/>
+  <text x="39" y="493" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e3a5f" transform="rotate(-90 39 493)">TechCorp Solutions</text>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       LANE DEFINITIONS  (x starts at 58)
+       L1 Colaborador       y=62   h=130  → cy=127
+       L2 Suporte/TI        y=192  h=140  → cy=262
+       L3 Gestor Depto.     y=332  h=130  → cy=397
+       L4 Admin. Sistema    y=462  h=120  → cy=522
+       L5 Diretoria         y=582  h=120  → cy=642
+       L6 RH / Qualidade    y=702  h=222  → cy=813
+  ════════════════════════════════════════════════════════════ -->
+
+  <!-- L1 -->
+  <rect x="58" y="62"  width="1522" height="130" fill="#f0faf4" stroke="#bbb" stroke-width="1"/>
+  <rect x="58" y="62"  width="106"  height="130" fill="#b8e0c8" stroke="#bbb" stroke-width="1"/>
+  <text x="111" y="127" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d" transform="rotate(-90 111 127)">Colaborador</text>
+
+  <!-- L2 -->
+  <rect x="58" y="192" width="1522" height="140" fill="#eff4fd" stroke="#bbb" stroke-width="1"/>
+  <rect x="58" y="192" width="106"  height="140" fill="#b8cff5" stroke="#bbb" stroke-width="1"/>
+  <text x="111" y="266" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e3a80" transform="rotate(-90 111 266)">Equipe Suporte / TI</text>
+
+  <!-- L3 -->
+  <rect x="58" y="332" width="1522" height="130" fill="#fffbf0" stroke="#bbb" stroke-width="1"/>
+  <rect x="58" y="332" width="106"  height="130" fill="#f5dfa0" stroke="#bbb" stroke-width="1"/>
+  <text x="111" y="401" text-anchor="middle" font-size="11" font-weight="bold" fill="#78350f" transform="rotate(-90 111 401)">Gestor de Depto.</text>
+
+  <!-- L4 -->
+  <rect x="58" y="462" width="1522" height="120" fill="#faf5ff" stroke="#bbb" stroke-width="1"/>
+  <rect x="58" y="462" width="106"  height="120" fill="#e0c0f8" stroke="#bbb" stroke-width="1"/>
+  <text x="111" y="530" text-anchor="middle" font-size="11" font-weight="bold" fill="#4c1d95" transform="rotate(-90 111 530)">Admin. do Sistema</text>
+
+  <!-- L5 -->
+  <rect x="58" y="582" width="1522" height="120" fill="#fff5f5" stroke="#bbb" stroke-width="1"/>
+  <rect x="58" y="582" width="106"  height="120" fill="#f8c0c0" stroke="#bbb" stroke-width="1"/>
+  <text x="111" y="647" text-anchor="middle" font-size="11" font-weight="bold" fill="#7f1d1d" transform="rotate(-90 111 647)">Diretoria</text>
+
+  <!-- L6 -->
+  <rect x="58" y="702" width="1522" height="222" fill="#f5faf0" stroke="#bbb" stroke-width="1"/>
+  <rect x="58" y="702" width="106"  height="222" fill="#c4e8b0" stroke="#bbb" stroke-width="1"/>
+  <text x="111" y="818" text-anchor="middle" font-size="11" font-weight="bold" fill="#14532d" transform="rotate(-90 111 818)">RH / Qualidade</text>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       LANE 1 — COLABORADOR  cy≈127
+  ════════════════════════════════════════════════════════════ -->
+
+  <!-- START -->
+  <circle cx="210" cy="127" r="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="210" y="156" text-anchor="middle" font-size="9" fill="#555">Necessidade</text>
+  <text x="210" y="167" text-anchor="middle" font-size="9" fill="#555">identificada</text>
+
+  <!-- T1: Elaborar solicitação -->
+  <rect x="248" y="106" width="128" height="44" rx="7" fill="#fff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="312" y="124" text-anchor="middle" font-size="10" fill="#111">Elaborar</text>
+  <text x="312" y="137" text-anchor="middle" font-size="10" fill="#111">solicitação</text>
+  <text x="312" y="148" text-anchor="middle" font-size="8" fill="#999">e-mail / WhatsApp / verbal</text>
+
+  <!-- T2: Enviar ao setor -->
+  <rect x="416" y="106" width="120" height="44" rx="7" fill="#fff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="476" y="124" text-anchor="middle" font-size="10" fill="#111">Enviar ao</text>
+  <text x="476" y="137" text-anchor="middle" font-size="10" fill="#111">setor responsável</text>
+  <text x="476" y="148" text-anchor="middle" font-size="8" fill="#999">sem protocolo</text>
+
+  <!-- Intermediate timer: Aguardar -->
+  <circle cx="610" cy="127" r="16" fill="#fff" stroke="#16a34a" stroke-width="1.5"/>
+  <circle cx="610" cy="127" r="11" fill="none" stroke="#16a34a" stroke-width="1.2"/>
+  <line x1="610" y1="120" x2="610" y2="127" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="610" y1="127" x2="615" y2="127" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="610" y="156" text-anchor="middle" font-size="9" fill="#555">Aguardar</text>
+  <text x="610" y="167" text-anchor="middle" font-size="9" fill="#555">retorno</text>
+
+  <!-- GW1: Obteve resposta? -->
+  <polygon points="680,127 702,106 724,127 702,148" fill="#fefce8" stroke="#ca8a04" stroke-width="2"/>
+  <text x="702" y="122" text-anchor="middle" font-size="8" fill="#713f12">Obteve</text>
+  <text x="702" y="133" text-anchor="middle" font-size="8" fill="#713f12">resposta?</text>
+  <text x="734" y="123" font-size="9" fill="#333">Sim</text>
+  <text x="695" y="95" text-anchor="middle" font-size="9" fill="#b91c1c">Não</text>
+
+  <!-- T_cobrar (loop) -->
+  <rect x="648" y="72" width="108" height="30" rx="6" fill="#fff" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="702" y="91" text-anchor="middle" font-size="9" fill="#b91c1c">Cobrar novamente</text>
+
+  <!-- T3: Receber retorno -->
+  <rect x="748" y="106" width="128" height="44" rx="7" fill="#fff" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="812" y="124" text-anchor="middle" font-size="10" fill="#111">Receber</text>
+  <text x="812" y="137" text-anchor="middle" font-size="10" fill="#111">retorno do chamado</text>
+  <text x="812" y="148" text-anchor="middle" font-size="8" fill="#999">sem histórico formal</text>
+
+  <!-- GW2: Resolvido? -->
+  <polygon points="938,127 960,106 982,127 960,148" fill="#fefce8" stroke="#ca8a04" stroke-width="2"/>
+  <text x="960" y="122" text-anchor="middle" font-size="8" fill="#713f12">Resolvido</text>
+  <text x="960" y="133" text-anchor="middle" font-size="8" fill="#713f12">?</text>
+  <text x="993" y="122" font-size="9" fill="#333">Sim</text>
+  <text x="953" y="96" text-anchor="middle" font-size="9" fill="#b91c1c">Não</text>
+
+  <!-- Retrabalho arc label -->
+  <text x="640" y="60" text-anchor="middle" font-size="9" fill="#b91c1c" font-style="italic">↺ loop de retrabalho</text>
+
+  <!-- END -->
+  <circle cx="1090" cy="127" r="16" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
+  <circle cx="1090" cy="127" r="10" fill="#16a34a"/>
+  <text x="1090" y="156" text-anchor="middle" font-size="9" fill="#555">Solicitação</text>
+  <text x="1090" y="167" text-anchor="middle" font-size="9" fill="#555">encerrada</text>
+
+  <!-- ARROWS L1 -->
+  <line x1="226" y1="127" x2="247" y2="127" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="376" y1="127" x2="415" y2="127" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="536" y1="127" x2="593" y2="127" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="626" y1="127" x2="679" y2="127" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Não → cobrar -->
+  <line x1="702" y1="106" x2="702" y2="102" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- cobrar → timer -->
+  <line x1="648" y1="87" x2="610" y2="87" stroke="#b91c1c" stroke-width="1.5"/>
+  <line x1="610" y1="87" x2="610" y2="110" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- Sim → receber -->
+  <line x1="724" y1="127" x2="747" y2="127" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="876" y1="127" x2="937" y2="127" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Sim → END -->
+  <line x1="982" y1="127" x2="1073" y2="127" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Não resolvido → reabrir (volta para elaborar) -->
+  <line x1="960" y1="106" x2="960" y2="52" stroke="#b91c1c" stroke-width="1.5"/>
+  <line x1="960" y1="52" x2="312" y2="52" stroke="#b91c1c" stroke-width="1.5"/>
+  <line x1="312" y1="52" x2="312" y2="105" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr-red)"/>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       LANE 2 — EQUIPE SUPORTE / TI  cy≈262
+  ════════════════════════════════════════════════════════════ -->
+
+  <!-- T4: Receber solicitação -->
+  <rect x="416" y="241" width="120" height="44" rx="7" fill="#fff" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="476" y="259" text-anchor="middle" font-size="10" fill="#111">Receber</text>
+  <text x="476" y="272" text-anchor="middle" font-size="10" fill="#111">solicitação</text>
+  <text x="476" y="283" text-anchor="middle" font-size="8" fill="#999">sem triagem automática</text>
+
+  <!-- GW3: Pedido claro? -->
+  <polygon points="594,262 616,241 638,262 616,283" fill="#fefce8" stroke="#ca8a04" stroke-width="2"/>
+  <text x="616" y="258" text-anchor="middle" font-size="8" fill="#713f12">Pedido</text>
+  <text x="616" y="269" text-anchor="middle" font-size="8" fill="#713f12">claro?</text>
+  <text x="649" y="258" font-size="9" fill="#333">Sim</text>
+  <text x="608" y="238" text-anchor="middle" font-size="9" fill="#b91c1c">Não</text>
+
+  <!-- T_esclarece -->
+  <rect x="562" y="285" width="108" height="30" rx="6" fill="#fff" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="616" y="304" text-anchor="middle" font-size="9" fill="#b91c1c">Pedir esclarecimento</text>
+
+  <!-- T5: Analisar e priorizar -->
+  <rect x="660" y="241" width="128" height="44" rx="7" fill="#fff" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="724" y="259" text-anchor="middle" font-size="10" fill="#111">Analisar e</text>
+  <text x="724" y="272" text-anchor="middle" font-size="10" fill="#111">priorizar tarefa</text>
+  <text x="724" y="283" text-anchor="middle" font-size="8" fill="#999">sem SLA definido</text>
+
+  <!-- GW4: Precisa aprovação? -->
+  <polygon points="848,262 870,241 892,262 870,283" fill="#fefce8" stroke="#ca8a04" stroke-width="2"/>
+  <text x="870" y="258" text-anchor="middle" font-size="8" fill="#713f12">Precisa</text>
+  <text x="870" y="269" text-anchor="middle" font-size="8" fill="#713f12">aprovação?</text>
+  <text x="904" y="258" font-size="9" fill="#333">Não</text>
+  <text x="870" y="294" text-anchor="middle" font-size="9" fill="#333">Sim</text>
+
+  <!-- T6: Executar atendimento -->
+  <rect x="916" y="241" width="128" height="44" rx="7" fill="#fff" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="980" y="259" text-anchor="middle" font-size="10" fill="#111">Executar</text>
+  <text x="980" y="272" text-anchor="middle" font-size="10" fill="#111">atendimento</text>
+  <text x="980" y="283" text-anchor="middle" font-size="8" fill="#999">sem registro formal</text>
+
+  <!-- T7: Comunicar resultado -->
+  <rect x="1098" y="241" width="128" height="44" rx="7" fill="#fff" stroke="#1d4ed8" stroke-width="1.5"/>
+  <text x="1162" y="259" text-anchor="middle" font-size="10" fill="#111">Comunicar</text>
+  <text x="1162" y="272" text-anchor="middle" font-size="10" fill="#111">resultado</text>
+  <text x="1162" y="283" text-anchor="middle" font-size="8" fill="#999">verbal / e-mail avulso</text>
+
+  <!-- ARROWS L2 internal -->
+  <line x1="536" y1="262" x2="593" y2="262" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Não → pedir esclarecimento -->
+  <line x1="616" y1="283" x2="616" y2="284" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- esclarece → volta receber -->
+  <line x1="562" y1="300" x2="476" y2="300" stroke="#b91c1c" stroke-width="1.5"/>
+  <line x1="476" y1="300" x2="476" y2="286" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- Sim → analisar -->
+  <line x1="638" y1="262" x2="659" y2="262" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="788" y1="262" x2="847" y2="262" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Não aprovação → executar -->
+  <line x1="892" y1="262" x2="915" y2="262" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="1044" y1="262" x2="1097" y2="262" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- MSG: L1 enviar → L2 receber -->
+  <line x1="476" y1="150" x2="476" y2="240" stroke="#777" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-msg)"/>
+  <!-- MSG: L2 comunicar → L1 receber retorno -->
+  <line x1="1162" y1="241" x2="1162" y2="175" stroke="#777" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="1162" y1="175" x2="876" y2="150" stroke="#777" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-msg)"/>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       LANE 3 — GESTOR DEPARTAMENTO  cy≈397
+  ════════════════════════════════════════════════════════════ -->
+
+  <!-- T8: Receber pedido de aprovação -->
+  <rect x="790" y="375" width="128" height="44" rx="7" fill="#fff" stroke="#b45309" stroke-width="1.5"/>
+  <text x="854" y="393" text-anchor="middle" font-size="10" fill="#111">Receber pedido</text>
+  <text x="854" y="406" text-anchor="middle" font-size="10" fill="#111">de aprovação</text>
+  <text x="854" y="417" text-anchor="middle" font-size="8" fill="#999">e-mail ou verbal</text>
+
+  <!-- GW5: Aprova? -->
+  <polygon points="974,397 996,375 1018,397 996,419" fill="#fefce8" stroke="#ca8a04" stroke-width="2"/>
+  <text x="996" y="393" text-anchor="middle" font-size="8" fill="#713f12">Aprova</text>
+  <text x="996" y="404" text-anchor="middle" font-size="8" fill="#713f12">?</text>
+  <text x="1028" y="393" font-size="9" fill="#333">Sim</text>
+  <text x="956" y="393" font-size="9" fill="#b91c1c">Não</text>
+
+  <!-- T_nega: Retornar negativa -->
+  <rect x="870" y="422" width="108" height="30" rx="6" fill="#fff" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="924" y="441" text-anchor="middle" font-size="9" fill="#b91c1c">Retornar negativa</text>
+
+  <!-- T9: Registrar decisão (manual) -->
+  <rect x="1048" y="375" width="128" height="44" rx="7" fill="#fff" stroke="#b45309" stroke-width="1.5"/>
+  <text x="1112" y="393" text-anchor="middle" font-size="10" fill="#111">Registrar decisão</text>
+  <text x="1112" y="406" text-anchor="middle" font-size="10" fill="#111">de aprovação</text>
+  <text x="1112" y="417" text-anchor="middle" font-size="8" fill="#999">planilha / anotação manual</text>
+
+  <!-- ARROWS L3 -->
+  <line x1="918" y1="397" x2="973" y2="397" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Não → negativa -->
+  <line x1="974" y1="397" x2="925" y2="397" stroke="#b91c1c" stroke-width="1.5"/>
+  <line x1="925" y1="397" x2="925" y2="421" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- negativa → volta L2 analisar -->
+  <line x1="870" y1="437" x2="724" y2="437" stroke="#b91c1c" stroke-width="1.5"/>
+  <line x1="724" y1="437" x2="724" y2="286" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- Sim → registrar -->
+  <line x1="1018" y1="397" x2="1047" y2="397" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- registrar → executar L2 -->
+  <line x1="1112" y1="375" x2="1112" y2="332" stroke="#444" stroke-width="1.5"/>
+  <line x1="1112" y1="332" x2="980" y2="286" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- MSG: L2 GW4 → L3 receber aprovação -->
+  <line x1="870" y1="283" x2="870" y2="374" stroke="#777" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-msg)"/>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       LANE 4 — ADMINISTRADOR DO SISTEMA  cy≈522
+  ════════════════════════════════════════════════════════════ -->
+
+  <!-- T10: Gerenciar usuários manualmente -->
+  <rect x="200" y="498" width="148" height="44" rx="7" fill="#fff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="274" y="515" text-anchor="middle" font-size="10" fill="#111">Gerenciar usuários</text>
+  <text x="274" y="528" text-anchor="middle" font-size="10" fill="#111">manualmente</text>
+  <text x="274" y="539" text-anchor="middle" font-size="8" fill="#999">planilhas / e-mail avulso</text>
+
+  <!-- T11: Configurar acessos ad hoc -->
+  <rect x="390" y="498" width="148" height="44" rx="7" fill="#fff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="464" y="515" text-anchor="middle" font-size="10" fill="#111">Configurar acessos</text>
+  <text x="464" y="528" text-anchor="middle" font-size="10" fill="#111">manualmente</text>
+  <text x="464" y="539" text-anchor="middle" font-size="8" fill="#999">sem sistema centralizado</text>
+
+  <!-- Annotation: sem rastreabilidade -->
+  <rect x="600" y="486" width="620" height="56" rx="6" fill="#f3e8ff" stroke="#7c3aed" stroke-width="1.2" stroke-dasharray="5,2"/>
+  <text x="910" y="508" text-anchor="middle" font-size="11" font-weight="bold" fill="#4c1d95">⚠ Ausência de sistema: sem controle de permissões, categorias ou SLAs configuráveis</text>
+  <text x="910" y="528" text-anchor="middle" font-size="10" fill="#6d28d9">Admin não possui plataforma integrada — toda gestão é manual, sem auditoria ou rastreabilidade de ações.</text>
+
+  <!-- ARROWS L4 -->
+  <line x1="348" y1="520" x2="389" y2="520" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       LANE 5 — DIRETORIA  cy≈642
+  ════════════════════════════════════════════════════════════ -->
+
+  <!-- T12: Receber relato verbal -->
+  <rect x="200" y="618" width="148" height="44" rx="7" fill="#fff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="274" y="635" text-anchor="middle" font-size="10" fill="#111">Receber relato</text>
+  <text x="274" y="648" text-anchor="middle" font-size="10" fill="#111">verbal de problemas</text>
+  <text x="274" y="659" text-anchor="middle" font-size="8" fill="#999">sem dados concretos</text>
+
+  <!-- T13: Tomar decisão baseada em percepção -->
+  <rect x="400" y="618" width="148" height="44" rx="7" fill="#fff" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="474" y="635" text-anchor="middle" font-size="10" fill="#111">Tomar decisão</text>
+  <text x="474" y="648" text-anchor="middle" font-size="10" fill="#111">sem evidência</text>
+  <text x="474" y="659" text-anchor="middle" font-size="8" fill="#999">baseada em percepção</text>
+
+  <!-- Annotation: sem KPIs -->
+  <rect x="610" y="604" width="620" height="56" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="5,2"/>
+  <text x="920" y="626" text-anchor="middle" font-size="11" font-weight="bold" fill="#7f1d1d">⚠ Sem visibilidade estratégica: nenhum KPI, relatório ou dashboard disponível</text>
+  <text x="920" y="646" text-anchor="middle" font-size="10" fill="#991b1b">Volume de chamados, tempo médio de resposta e eficiência operacional são desconhecidos pela Diretoria.</text>
+
+  <!-- ARROWS L5 -->
+  <line x1="348" y1="640" x2="399" y2="640" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- MSG: L2 → L5 relato de gargalos (verbal, eventual) -->
+  <line x1="980" y1="286" x2="980" y2="618" stroke="#777" stroke-width="1" stroke-dasharray="4,3" opacity="0.6" marker-end="url(#arr-msg)"/>
+  <text x="988" y="455" font-size="8" fill="#999" font-style="italic">relato eventual</text>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       LANE 6 — RH / QUALIDADE  cy≈813
+  ════════════════════════════════════════════════════════════ -->
+
+  <!-- T14: Solicitar dados de desempenho -->
+  <rect x="200" y="742" width="148" height="44" rx="7" fill="#fff" stroke="#15803d" stroke-width="1.5"/>
+  <text x="274" y="759" text-anchor="middle" font-size="10" fill="#111">Solicitar dados</text>
+  <text x="274" y="772" text-anchor="middle" font-size="10" fill="#111">de desempenho</text>
+  <text x="274" y="783" text-anchor="middle" font-size="8" fill="#999">por e-mail / verbal</text>
+
+  <!-- GW6: Dados disponíveis? -->
+  <polygon points="400,764 422,742 444,764 422,786" fill="#fefce8" stroke="#ca8a04" stroke-width="2"/>
+  <text x="422" y="760" text-anchor="middle" font-size="8" fill="#713f12">Dados</text>
+  <text x="422" y="771" text-anchor="middle" font-size="8" fill="#713f12">disponíveis?</text>
+  <text x="455" y="760" font-size="9" fill="#333">Sim</text>
+  <text x="415" y="738" text-anchor="middle" font-size="9" fill="#b91c1c">Não</text>
+
+  <!-- T15: Aguardar / desistir -->
+  <rect x="370" y="790" width="108" height="30" rx="6" fill="#fff" stroke="#b91c1c" stroke-width="1.5"/>
+  <text x="424" y="809" text-anchor="middle" font-size="9" fill="#b91c1c">Aguardar / desistir</text>
+
+  <!-- T16: Compilar dados manualmente -->
+  <rect x="476" y="742" width="148" height="44" rx="7" fill="#fff" stroke="#15803d" stroke-width="1.5"/>
+  <text x="550" y="759" text-anchor="middle" font-size="10" fill="#111">Compilar dados</text>
+  <text x="550" y="772" text-anchor="middle" font-size="10" fill="#111">manualmente</text>
+  <text x="550" y="783" text-anchor="middle" font-size="8" fill="#999">planilhas dispersas</text>
+
+  <!-- T17: Gerar relatório parcial -->
+  <rect x="670" y="742" width="148" height="44" rx="7" fill="#fff" stroke="#15803d" stroke-width="1.5"/>
+  <text x="744" y="759" text-anchor="middle" font-size="10" fill="#111">Gerar relatório</text>
+  <text x="744" y="772" text-anchor="middle" font-size="10" fill="#111">parcial</text>
+  <text x="744" y="783" text-anchor="middle" font-size="8" fill="#999">dados incompletos / imprecisos</text>
+
+  <!-- Annotation -->
+  <rect x="878" y="730" width="620" height="70" rx="6" fill="#f0fdf4" stroke="#15803d" stroke-width="1.2" stroke-dasharray="5,2"/>
+  <text x="1188" y="754" text-anchor="middle" font-size="11" font-weight="bold" fill="#14532d">⚠ Stakeholder indireto: sem acesso a métricas reais de produtividade</text>
+  <text x="1188" y="774" text-anchor="middle" font-size="10" fill="#166534">Relatórios de qualidade são construídos manualmente com dados fragmentados e desatualizados.</text>
+  <text x="1188" y="790" text-anchor="middle" font-size="10" fill="#166534">Melhoria contínua é prejudicada pela ausência de um sistema que gere indicadores automaticamente.</text>
+
+  <!-- END RH -->
+  <circle cx="1470" cy="764" r="16" fill="#dcfce7" stroke="#15803d" stroke-width="2.5"/>
+  <circle cx="1470" cy="764" r="10" fill="#15803d"/>
+  <text x="1470" y="793" text-anchor="middle" font-size="9" fill="#555">Processo</text>
+  <text x="1470" y="804" text-anchor="middle" font-size="9" fill="#555">encerrado</text>
+
+  <!-- ARROWS L6 -->
+  <line x1="348" y1="764" x2="399" y2="764" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Não → aguardar -->
+  <line x1="422" y1="786" x2="422" y2="789" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- aguardar → fim -->
+  <line x1="478" y1="805" x2="1470" y2="805" stroke="#b91c1c" stroke-width="1.5"/>
+  <line x1="1470" y1="805" x2="1470" y2="781" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <!-- Sim → compilar -->
+  <line x1="444" y1="764" x2="475" y2="764" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="624" y1="764" x2="669" y2="764" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="818" y1="764" x2="877" y2="764" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       LEGEND
+  ════════════════════════════════════════════════════════════ -->
+  <rect x="1240" y="840" width="336" height="74" rx="6" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <text x="1256" y="858" font-size="10" font-weight="bold" fill="#333">Legenda</text>
+  <!-- start -->
+  <circle cx="1270" cy="874" r="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="1284" y="878" font-size="9" fill="#444">Início</text>
+  <!-- timer -->
+  <circle cx="1320" cy="874" r="8" fill="#fff" stroke="#16a34a" stroke-width="1.5"/>
+  <circle cx="1320" cy="874" r="5" fill="none" stroke="#16a34a" stroke-width="1"/>
+  <text x="1334" y="878" font-size="9" fill="#444">Timer</text>
+  <!-- end -->
+  <circle cx="1380" cy="874" r="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <circle cx="1380" cy="874" r="5" fill="#16a34a"/>
+  <text x="1394" y="878" font-size="9" fill="#444">Fim</text>
+  <!-- gateway -->
+  <polygon points="1440,874 1452,862 1464,874 1452,886" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="1470" y="878" font-size="9" fill="#444">Gateway XOR</text>
+  <!-- flows -->
+  <line x1="1256" y1="896" x2="1296" y2="896" stroke="#444" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="1303" y="900" font-size="9" fill="#444">Sequência</text>
+  <line x1="1360" y1="896" x2="1400" y2="896" stroke="#777" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#arr-msg)"/>
+  <text x="1408" y="900" font-size="9" fill="#444">Mensagem</text>
+  <line x1="1256" y1="908" x2="1296" y2="908" stroke="#b91c1c" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <text x="1303" y="912" font-size="9" fill="#b91c1c">Exceção/Retrabalho</text>
+
+</svg>
