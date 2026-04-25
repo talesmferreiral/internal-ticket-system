@@ -162,6 +162,27 @@ A digital system was proposed focusing on:
 
 ---
 
+## 🚀 Próximos Passos | Future Work
+
+### 🇧🇷 Português
+
+Este projeto representa a análise do processo atual da organização (AS-IS), modelado por meio de BPMN.
+
+Como evolução futura, pretende-se desenvolver o sistema de gestão de chamados proposto neste projeto, implementando funcionalidades como cadastro de solicitações, acompanhamento de status, priorização automática e geração de relatórios.
+
+O objetivo é transformar a análise realizada em uma solução prática e funcional.
+
+---
+
+### 🇺🇸 English
+
+This project represents the analysis of the organization's current process (AS-IS), modeled using BPMN.
+
+As a future step, the goal is to develop the proposed ticket management system, implementing features such as ticket creation, status tracking, automatic prioritization, and reporting.
+
+The objective is to turn this analysis into a practical and functional solution.
+
+
 ## 👨‍💻 Author
 
 Tales Manfredine Ferreira Lopes
