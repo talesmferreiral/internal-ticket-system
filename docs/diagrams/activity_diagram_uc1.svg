@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 1020" width="680" height="1020" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 1L9 5L0 9" fill="#1e3a5f" stroke="none"/>
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 1L9 5L0 9" fill="#dc2626" stroke="none"/>
+    </marker>
+    <marker id="arr-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 1L9 5L0 9" fill="#555" stroke="none"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="680" height="1020" fill="#f5f5f3" rx="10"/>
+
+  <!-- Title -->
+  <rect x="16" y="10" width="648" height="46" rx="6" fill="#1e3a5f"/>
+  <text x="340" y="29" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Diagrama de Atividades — UC1: Abrir Solicitação</text>
+  <text x="340" y="47" text-anchor="middle" font-size="10" fill="#93c5fd">Sistema de Gestão de Chamados · TechCorp Solutions · UML Activity Diagram</text>
+
+  <!-- ── START NODE ── -->
+  <circle cx="340" cy="90" r="16" fill="#1e3a5f"/>
+  <text x="370" y="95" font-size="10" fill="#555">Início</text>
+
+  <!-- Arrow 1 -->
+  <line x1="340" y1="106" x2="340" y2="128" stroke="#1e3a5f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- A1: Acessar sistema -->
+  <rect x="210" y="128" width="260" height="40" rx="20" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+  <text x="340" y="153" text-anchor="middle" font-size="11" fill="#1e3a80" font-weight="bold">Acessar o sistema</text>
+
+  <line x1="340" y1="168" x2="340" y2="190" stroke="#1e3a5f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- D1: Credenciais válidas? -->
+  <polygon points="340,190 420,225 340,260 260,225" fill="#fffbeb" stroke="#b45309" stroke-width="1.8"/>
+  <text x="340" y="221" text-anchor="middle" font-size="10" fill="#78350f">Credenciais</text>
+  <text x="340" y="234" text-anchor="middle" font-size="10" fill="#78350f">válidas?</text>
+  <!-- Sim -->
+  <line x1="340" y1="260" x2="340" y2="282" stroke="#1e3a5f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="352" y="275" font-size="9" fill="#14532d" font-weight="bold">Sim</text>
+  <!-- Não -->
+  <line x1="420" y1="225" x2="530" y2="225" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <text x="468" y="219" font-size="9" fill="#dc2626" font-weight="bold">Não</text>
+  <!-- Erro login box -->
+  <rect x="530" y="205" width="120" height="40" rx="20" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="590" y="222" text-anchor="middle" font-size="10" fill="#dc2626">Exibir erro</text>
+  <text x="590" y="236" text-anchor="middle" font-size="10" fill="#dc2626">de login</text>
+  <!-- volta para acessar -->
+  <line x1="590" y1="205" x2="590" y2="148" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="590" y1="148" x2="471" y2="148" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr-red)"/>
+
+  <!-- A2: Exibir formulário -->
+  <rect x="210" y="282" width="260" height="40" rx="20" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+  <text x="340" y="307" text-anchor="middle" font-size="11" fill="#1e3a80" font-weight="bold">Exibir formulário de chamado</text>
+
+  <line x1="340" y1="322" x2="340" y2="344" stroke="#1e3a5f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- A3: Preencher formulário -->
+  <rect x="210" y="344" width="260" height="40" rx="20" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+  <text x="340" y="362" text-anchor="middle" font-size="11" fill="#1e3a80" font-weight="bold">Preencher título, categoria,</text>
+  <text x="340" y="376" text-anchor="middle" font-size="11" fill="#1e3a80" font-weight="bold">descrição e urgência</text>
+
+  <line x1="340" y1="384" x2="340" y2="406" stroke="#1e3a5f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- A4: Enviar solicitação -->
+  <rect x="210" y="406" width="260" height="40" rx="20" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.8"/>
+  <text x="340" y="431" text-anchor="middle" font-size="11" fill="#1e3a80" font-weight="bold">Clicar em "Enviar solicitação"</text>
+
+  <line x1="340" y1="446" x2="340" y2="468" stroke="#1e3a5f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- D2: Dados válidos? -->
+  <polygon points="340,468 420,503 340,538 260,503" fill="#fffbeb" stroke="#b45309" stroke-width="1.8"/>
+  <text x="340" y="499" text-anchor="middle" font-size="10" fill="#78350f">Dados</text>
+  <text x="340" y="512" text-anchor="middle" font-size="10" fill="#78350f">válidos?</text>
+  <!-- Não -->
+  <line x1="260" y1="503" x2="150" y2="503" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <text x="200" y="496" font-size="9" fill="#dc2626" font-weight="bold">Não</text>
+  <!-- Erro campos -->
+  <rect x="30" y="483" width="120" height="40" rx="20" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="90" y="500" text-anchor="middle" font-size="10" fill="#dc2626">Destacar campos</text>
+  <text x="90" y="514" text-anchor="middle" font-size="10" fill="#dc2626">com erro</text>
+  <!-- volta para formulário -->
+  <line x1="90" y1="483" x2="90" y2="364" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="90" y1="364" x2="209" y2="364" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr-red)"/>
+
+  <!-- Sim -->
+  <line x1="340" y1="538" x2="340" y2="560" stroke="#1e3a5f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="352" y="553" font-size="9" fill="#14532d" font-weight="bold">Sim</text>
+
+  <!-- D3: Chamado duplicado? -->
+  <polygon points="340,560 420,595 340,630 260,595" fill="#fffbeb" stroke="#b45309" stroke-width="1.8"/>
+  <text x="340" y="591" text-anchor="middle" font-size="10" fill="#78350f">Chamado</text>
+  <text x="340" y="604" text-anchor="middle" font-size="10" fill="#78350f">duplicado?</text>
+  <!-- Sim duplicado -->
+  <line x1="420" y1="595" x2="530" y2="595" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <text x="472" y="588" font-size="9" fill="#dc2626" font-weight="bold">Sim</text>
+  <rect x="530" y="575" width="120" height="40" rx="20" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="590" y="592" text-anchor="middle" font-size="10" fill="#dc2626">Exibir aviso de</text>
+  <text x="590" y="606" text-anchor="middle" font-size="10" fill="#dc2626">duplicidade</text>
+  <!-- Não duplicado -->
+  <line x1="340" y1="630" x2="340" y2="652" stroke="#1e3a5f" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="352" y="645" font-size="9" fill="#14532d" font-weight="bold">Não</text>
+
+  <!-- A5: Criar chamado e gerar protocolo -->
+  <rect x="190" y="652" width="300" height="40" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="340" y="670" text-anchor="middle" font-size="11" fill="#14532d" font-weight="bold">Criar chamado e gerar</text>
+  <text x="340" y="684" text-anchor="middle" font-size="11" fill="#14532d" font-weight="bold">protocolo único</text>
+
+  <line x1="340" y1="692" x2="340" y2="714" stroke="#1e3a5f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- A6: Encaminhar para fila -->
+  <rect x="190" y="714" width="300" height="40" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="340" y="732" text-anchor="middle" font-size="11" fill="#14532d" font-weight="bold">Encaminhar para fila</text>
+  <text x="340" y="746" text-anchor="middle" font-size="11" fill="#14532d" font-weight="bold">da Equipe de Suporte</text>
+
+  <line x1="340" y1="754" x2="340" y2="776" stroke="#1e3a5f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- A7: Notificar colaborador -->
+  <rect x="190" y="776" width="300" height="40" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="340" y="794" text-anchor="middle" font-size="11" fill="#14532d" font-weight="bold">Enviar notificação automática</text>
+  <text x="340" y="808" text-anchor="middle" font-size="11" fill="#14532d" font-weight="bold">ao colaborador</text>
+
+  <line x1="340" y1="816" x2="340" y2="838" stroke="#1e3a5f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- A8: Exibir confirmação -->
+  <rect x="210" y="838" width="260" height="40" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="1.8"/>
+  <text x="340" y="856" text-anchor="middle" font-size="11" fill="#14532d" font-weight="bold">Exibir confirmação com</text>
+  <text x="340" y="870" text-anchor="middle" font-size="11" fill="#14532d" font-weight="bold">número do protocolo</text>
+
+  <line x1="340" y1="878" x2="340" y2="900" stroke="#1e3a5f" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- ── END NODE ── -->
+  <circle cx="340" cy="916" r="16" fill="#fff" stroke="#1e3a5f" stroke-width="2.5"/>
+  <circle cx="340" cy="916" r="10" fill="#1e3a5f"/>
+  <text x="370" y="921" font-size="10" fill="#555">Fim</text>
+
+  <!-- ── LEGEND ── -->
+  <rect x="20" y="946" width="640" height="60" rx="6" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <text x="36" y="964" font-size="10" font-weight="bold" fill="#1e3a5f">Legenda</text>
+  <!-- start -->
+  <circle cx="50" cy="980" r="8" fill="#1e3a5f"/>
+  <text x="64" y="984" font-size="9" fill="#333">Nó inicial</text>
+  <!-- end -->
+  <circle cx="140" cy="980" r="8" fill="#fff" stroke="#1e3a5f" stroke-width="2"/>
+  <circle cx="140" cy="980" r="5" fill="#1e3a5f"/>
+  <text x="154" y="984" font-size="9" fill="#333">Nó final</text>
+  <!-- action -->
+  <rect x="220" y="972" width="70" height="16" rx="8" fill="#dbeafe" stroke="#1d4ed8" stroke-width="1.2"/>
+  <text x="255" y="984" text-anchor="middle" font-size="8" fill="#1e3a80">Ação</text>
+  <!-- decision -->
+  <polygon points="360,972 380,980 360,988 340,980" fill="#fffbeb" stroke="#b45309" stroke-width="1.2"/>
+  <text x="396" y="984" font-size="9" fill="#333">Decisão</text>
+  <!-- exception -->
+  <line x1="460" y1="980" x2="500" y2="980" stroke="#dc2626" stroke-width="1.5" marker-end="url(#arr-red)"/>
+  <text x="508" y="984" font-size="9" fill="#dc2626">Fluxo de exceção</text>
+
+</svg>
