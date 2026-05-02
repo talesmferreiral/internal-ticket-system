@@ -11,7 +11,7 @@
 |-------|-----------|--------|
 | I | Análise do Processo e Modelagem BPMN (AS-IS) | ✅ Concluída |
 | II | Modelagem UML — Casos de Uso e Especificação Textual | ✅ Concluída |
-| III | Modelagem UML — Classes e Diagramas Comportamentais | 🔄 Em breve |
+| III | Modelagem UML — Sequência, Atividades e Interpretação | ✅ Concluída |
 | IV | Síntese, Reflexão e Entrega Final | 🔄 Em breve |
 
 ---
@@ -20,9 +20,7 @@
 
 ## 📌 Sobre o Projeto
 
-Este projeto foi desenvolvido como parte da disciplina de Prototipagem de Sistemas no 1º semestre de Ciência da Computação.
-
-O objetivo foi analisar um processo organizacional com problemas reais e propor uma solução digital para melhorar a eficiência operacional, reduzindo retrabalho, atrasos e falta de controle nas solicitações internas.
+Este projeto simula o trabalho de um Analista de Sistemas em uma empresa fictícia de tecnologia. O objetivo foi analisar um processo organizacional com problemas reais, propor uma solução digital e modelar toda a arquitetura do sistema utilizando notações BPMN e UML.
 
 ---
 
@@ -31,16 +29,16 @@ O objetivo foi analisar um processo organizacional com problemas reais e propor 
 A organização analisada utilizava um processo manual e descentralizado para gerenciar solicitações internas, usando e-mails, mensagens e comunicação verbal. Isso gerava:
 
 - Falta de controle das demandas
-- Perda de informações
-- Retrabalho
+- Perda de informações e retrabalho
 - Atrasos no atendimento
 - Baixa rastreabilidade
+- Stakeholders estratégicos sem visibilidade do processo
 
 ---
 
 ## ✅ Etapa I — Modelagem do Processo Atual (AS-IS)
 
-O processo atual foi modelado utilizando **BPMN**, com 6 raias representando cada stakeholder, evidenciando as falhas operacionais como ausência de sistema integrado, comunicação informal, falta de priorização e stakeholders estratégicos completamente sem visibilidade do processo.
+Modelagem do processo atual utilizando **BPMN** com 6 raias representando cada stakeholder, evidenciando as falhas operacionais.
 
 ### 👥 Stakeholders identificados
 
@@ -61,17 +59,16 @@ O processo atual foi modelado utilizando **BPMN**, com 6 raias representando cad
 
 ## ✅ Etapa II — Modelagem UML: Casos de Uso e Especificação Textual
 
-Nesta etapa foi desenvolvido o **Diagrama de Casos de Uso UML** representando o sistema digital proposto, seguido da especificação textual detalhada dos principais casos de uso com fluxos principal, alternativo e de exceção.
+Desenvolvimento do **Diagrama de Casos de Uso UML** representando o sistema proposto, com especificação textual detalhada dos principais casos de uso.
 
 ### 🧩 Diagrama de Casos de Uso
 
 ![Casos de Uso UML](docs/diagrams/use_case_diagram.svg)
 
-### 📋 Principais Casos de Uso
+### 📋 Casos de Uso principais
 
 - Abrir solicitação / chamado interno
-- Acompanhar status do chamado em tempo real
-- Receber notificações automáticas
+- Acompanhar status em tempo real
 - Assumir e atualizar status do chamado
 - Encaminhar chamado para outro setor
 - Aprovar / rejeitar chamado
@@ -82,38 +79,46 @@ Nesta etapa foi desenvolvido o **Diagrama de Casos de Uso UML** representando o 
 - Registrar log de auditoria *(«include»)*
 - Emitir alerta de SLA vencido *(«extend»)*
 
-### 📝 Especificação Textual — UC1: Abrir Solicitação
+### 📝 Especificação Textual
 
-| Campo | Descrição |
-|-------|-----------|
-| **Ator principal** | Colaborador |
-| **Pré-condição** | Usuário autenticado no sistema |
-| **Fluxo principal** | Preenche formulário → sistema valida → gera protocolo → notifica |
-| **Fluxos alternativos** | Campo vazio, urgência alta, salvar como rascunho |
-| **Fluxos de exceção** | Chamado duplicado, falha de conexão, sessão expirada |
-| **Pós-condição** | Chamado registrado com protocolo único e notificação enviada |
-
-### 📝 Especificação Textual — UC2: Assumir e Atualizar Status
-
-| Campo | Descrição |
-|-------|-----------|
-| **Ator principal** | Equipe de Suporte / TI |
-| **Pré-condição** | Atendente autenticado e chamado disponível na fila |
-| **Fluxo principal** | Assume chamado → executa → registra solução → encerra |
-| **Fluxos alternativos** | Encaminhar para outro setor, aguardar informações, solicitar aprovação |
-| **Fluxos de exceção** | Chamado já assumido, encerramento sem solução, perda de conexão |
-| **Pós-condição** | Chamado atribuído, histórico registrado e colaborador notificado |
+| | UC1 — Abrir Solicitação | UC2 — Assumir Chamado |
+|--|------------------------|----------------------|
+| **Ator principal** | Colaborador | Equipe Suporte / TI |
+| **Pré-condição** | Usuário autenticado | Atendente autenticado e chamado na fila |
+| **Pós-condição** | Chamado registrado com protocolo único | Chamado atribuído e colaborador notificado |
 
 ---
 
-## 🔄 Etapa III — Em breve: Modelagem UML Avançada
+## ✅ Etapa III — Modelagem UML: Diagramas Comportamentais
 
-A próxima etapa irá aprofundar a modelagem técnica do sistema com:
+Modelagem estrutural e dinâmica do sistema com diagramas de classes, sequência e atividades.
 
-- **Diagrama de Classes** — estrutura lógica e relacionamentos entre entidades
-- **Diagramas Comportamentais** — sequência, atividades e estados
-- **Interpretação integrada** dos modelos produzidos
-- **Síntese e reflexão** sobre a arquitetura do sistema
+### 🏗️ Classes identificadas
+
+| Classe | Responsabilidade |
+|--------|-----------------|
+| `Colaborador` | Abre e acompanha chamados |
+| `Chamado` | Entidade central — armazena dados e gera protocolo |
+| `Atendente` | Assume, atualiza e resolve chamados |
+| `Notificacao` | Dispara alertas automáticos de status |
+| `Categoria` | Define tipo e SLA do chamado |
+| `HistoricoAtividade` | Registra todas as ações para auditoria |
+
+### 🔄 Diagrama de Sequência — UC1: Abrir Solicitação
+
+Representa a troca de mensagens entre objetos ao longo do tempo, com fragmento combinado `alt` para o fluxo de dados válidos e inválidos.
+
+![Diagrama de Sequência](docs/diagrams/sequence_diagram_uc1.svg)
+
+### 🔀 Diagrama de Atividades — UC1: Abrir Solicitação
+
+Representa o fluxo lógico de negócio com nós de ação, decisões e tratamento de exceções.
+
+![Diagrama de Atividades](docs/diagrams/activity_diagram_uc1.svg)
+
+### 🔗 Integração entre os modelos
+
+> O diagrama de classes define a estrutura — atributos e métodos disponíveis. O diagrama de sequência mostra como esses métodos são invocados entre objetos ao longo do tempo. O diagrama de atividades representa o mesmo fluxo na perspectiva das regras de negócio. Os três diagramas são complementares e consistentes entre si.
 
 ---
 
@@ -137,21 +142,17 @@ A próxima etapa irá aprofundar a modelagem técnica do sistema com:
 
 ---
 
-## 🎯 Solução Proposta
-
-Criação de um **sistema digital integrado** com foco em centralização das informações, automação de processos, melhoria da comunicação entre departamentos, geração de indicadores de desempenho e rastreabilidade completa dos chamados.
-
----
-
 ## 📁 Estrutura do Repositório
 
 ```
 internal-ticket-system/
 ├── docs/
 │   └── diagrams/
-│       ├── bpmn_as_is.svg            # Diagrama BPMN — Processo AS-IS
-│       ├── bpmn_as_is.png            # Versão PNG do BPMN
-│       └── use_case_diagram.svg      # Diagrama de Casos de Uso UML
+│       ├── bpmn_as_is.svg                # Diagrama BPMN — Processo AS-IS
+│       ├── bpmn_as_is.png                # Versão PNG do BPMN
+│       ├── use_case_diagram.svg          # Diagrama de Casos de Uso UML
+│       ├── sequence_diagram_uc1.svg      # Diagrama de Sequência — UC1
+│       └── activity_diagram_uc1.svg      # Diagrama de Atividades — UC1
 └── README.md
 ```
 
@@ -162,9 +163,10 @@ internal-ticket-system/
 - Levantamento e análise de requisitos
 - Modelagem de processos com BPMN
 - Identificação e classificação de stakeholders
-- Modelagem de sistemas com UML (Casos de Uso)
-- Especificação textual de casos de uso com fluxos de exceção
-- Pensamento crítico e sistemático antes de programar
+- Modelagem UML: Casos de Uso, Classes, Sequência e Atividades
+- Especificação textual com fluxos principal, alternativo e de exceção
+- Integração entre modelos estruturais e comportamentais
+- Pensamento sistemático antes de codificar
 
 ---
 ---
@@ -173,9 +175,7 @@ internal-ticket-system/
 
 ## 📌 About the Project
 
-This project was developed as part of a Systems Prototyping course during the first semester of a Computer Science degree.
-
-The goal was to analyze an organizational process with real problems and propose a digital solution to improve operational efficiency, reducing rework, delays, and lack of control over internal requests.
+This project simulates the work of a Systems Analyst at a fictional technology company. The goal was to analyze an organizational process with real problems, propose a digital solution, and model the entire system architecture using BPMN and UML notations.
 
 ---
 
@@ -183,28 +183,16 @@ The goal was to analyze an organizational process with real problems and propose
 
 The analyzed organization managed internal requests through a manual and decentralized process, relying on emails, messages, and verbal communication. This caused:
 
-- Lack of demand control
-- Information loss
-- Rework
-- Service delays
+- Lack of demand control and information loss
+- Rework and service delays
 - Low traceability
+- Strategic stakeholders with no process visibility
 
 ---
 
 ## ✅ Stage I — Current Process Modeling (AS-IS)
 
-The current process was modeled using **BPMN**, with 6 swim lanes representing each stakeholder, highlighting operational failures such as no integrated system, informal communication, lack of prioritization, and strategic stakeholders with no process visibility.
-
-### 👥 Identified Stakeholders
-
-| Stakeholder | Role | Influence |
-|-------------|------|-----------|
-| Employee | End user — opens requests | Medium |
-| Support / IT Team | Handles and manages tickets | High |
-| Department Manager | Supervises and approves tickets | High |
-| System Administrator | Manages users and settings | High |
-| Board / Directors | Strategic decision-making | Very High |
-| HR / Quality | Performance analysis and continuous improvement | Medium |
+Current process modeled using **BPMN** with 6 swim lanes representing each stakeholder, highlighting operational failures.
 
 ### 📊 BPMN Diagram — AS-IS Process
 
@@ -214,85 +202,40 @@ The current process was modeled using **BPMN**, with 6 swim lanes representing e
 
 ## ✅ Stage II — UML Modeling: Use Cases and Textual Specification
 
-In this stage, a **UML Use Case Diagram** was developed representing the proposed digital system, followed by a detailed textual specification of the main use cases including main, alternative, and exception flows.
+Development of the **UML Use Case Diagram** representing the proposed system, with detailed textual specification of the main use cases.
 
 ### 🧩 Use Case Diagram
 
 ![Use Case Diagram](docs/diagrams/use_case_diagram.svg)
 
-### 📋 Main Use Cases
-
-- Open internal request / ticket
-- Track ticket status in real time
-- Receive automatic notifications
-- Take ownership and update ticket status
-- Forward ticket to another department
-- Approve / reject ticket
-- View management dashboard / KPIs
-- Generate and export reports
-- Manage users and permissions
-- Configure categories and SLAs
-- Record audit log *(«include»)*
-- Issue SLA breach alert *(«extend»)*
-
-### 📝 Textual Specification — UC1: Open Request
-
-| Field | Description |
-|-------|-------------|
-| **Primary actor** | Employee |
-| **Pre-condition** | User authenticated in the system |
-| **Main flow** | Fill out form → system validates → generates protocol → sends notification |
-| **Alternative flows** | Empty field, high urgency, save as draft |
-| **Exception flows** | Duplicate ticket, connection failure, expired session |
-| **Post-condition** | Ticket registered with unique protocol and confirmation sent |
-
-### 📝 Textual Specification — UC2: Take Ownership and Update Status
-
-| Field | Description |
-|-------|-------------|
-| **Primary actor** | Support / IT Team |
-| **Pre-condition** | Attendant authenticated and ticket available in queue |
-| **Main flow** | Take ticket → perform service → record solution → close |
-| **Alternative flows** | Forward to another department, wait for info, request approval |
-| **Exception flows** | Ticket already taken, closure without solution, connection loss |
-| **Post-condition** | Ticket assigned, history recorded, employee notified |
-
 ---
 
-## 🔄 Stage III — Coming Soon: Advanced UML Modeling
+## ✅ Stage III — UML Modeling: Behavioral Diagrams
 
-The next stage will deepen the technical modeling of the system with:
+Structural and dynamic modeling of the system with class, sequence, and activity diagrams.
 
-- **Class Diagram** — logical structure and relationships between entities
-- **Behavioral Diagrams** — sequence, activity, and state diagrams
-- **Integrated interpretation** of all produced models
-- **Synthesis and reflection** on the system architecture
+### 🏗️ Identified Classes
 
----
+| Class | Responsibility |
+|-------|---------------|
+| `Collaborator` | Opens and tracks tickets |
+| `Ticket` | Core entity — stores data and generates protocol |
+| `Attendant` | Takes ownership, updates and resolves tickets |
+| `Notification` | Triggers automatic status alerts |
+| `Category` | Defines ticket type and SLA |
+| `ActivityLog` | Records all actions for audit trail |
 
-## ⚙️ System Requirements
+### 🔄 Sequence Diagram — UC1: Open Request
 
-### ✅ Functional
-- Ticket registration with automatic protocol
-- Real-time status tracking
-- Automatic prioritization by urgency
-- Assignee management
-- Full history logging
-- Automatic notifications
-- Reports and management KPIs
+![Sequence Diagram](docs/diagrams/sequence_diagram_uc1.svg)
 
-### 🔒 Non-Functional
-- Performance (response < 2 seconds)
-- Security and access control
-- Intuitive usability
-- Minimum 99% availability
-- Scalability
+### 🔀 Activity Diagram — UC1: Open Request
 
----
+![Activity Diagram](docs/diagrams/activity_diagram_uc1.svg)
 
-## 🎯 Proposed Solution
+### 🔗 Model Integration
 
-Creation of an **integrated digital system** focused on centralized information, process and notification automation, improved inter-department communication, performance indicator generation, and full ticket traceability.
+> The class diagram defines the structure — available attributes and methods. The sequence diagram shows how those methods are invoked between objects over time. The activity diagram represents the same flow from a business rules perspective. All three diagrams are complementary and consistent with each other.
 
 ---
 
@@ -302,9 +245,11 @@ Creation of an **integrated digital system** focused on centralized information,
 internal-ticket-system/
 ├── docs/
 │   └── diagrams/
-│       ├── bpmn_as_is.svg            # BPMN Diagram — AS-IS Process
-│       ├── bpmn_as_is.png            # PNG version of BPMN
-│       └── use_case_diagram.svg      # UML Use Case Diagram
+│       ├── bpmn_as_is.svg                # BPMN Diagram — AS-IS Process
+│       ├── bpmn_as_is.png                # PNG version of BPMN
+│       ├── use_case_diagram.svg          # UML Use Case Diagram
+│       ├── sequence_diagram_uc1.svg      # Sequence Diagram — UC1
+│       └── activity_diagram_uc1.svg      # Activity Diagram — UC1
 └── README.md
 ```
 
@@ -315,9 +260,10 @@ internal-ticket-system/
 - Requirements gathering and analysis
 - Process modeling with BPMN
 - Stakeholder identification and classification
-- System modeling with UML (Use Cases)
-- Textual use case specification with exception flows
-- Critical and systematic thinking before coding
+- UML modeling: Use Cases, Classes, Sequence and Activity diagrams
+- Textual specification with main, alternative and exception flows
+- Integration between structural and behavioral models
+- Systematic thinking before coding
 
 ---
 
