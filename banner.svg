@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 400" width="1280" height="400" font-family="Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="1280" height="400" fill="#0F172A"/>
+
+  <!-- Decorative grid lines -->
+  <line x1="0" y1="100" x2="1280" y2="100" stroke="#1E293B" stroke-width="1"/>
+  <line x1="0" y1="200" x2="1280" y2="200" stroke="#1E293B" stroke-width="1"/>
+  <line x1="0" y1="300" x2="1280" y2="300" stroke="#1E293B" stroke-width="1"/>
+  <line x1="256" y1="0" x2="256" y2="400" stroke="#1E293B" stroke-width="1"/>
+  <line x1="512" y1="0" x2="512" y2="400" stroke="#1E293B" stroke-width="1"/>
+  <line x1="768" y1="0" x2="768" y2="400" stroke="#1E293B" stroke-width="1"/>
+  <line x1="1024" y1="0" x2="1024" y2="400" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Accent bar left -->
+  <rect x="0" y="0" width="4" height="400" fill="#378ADD"/>
+
+  <!-- Left content block -->
+  <!-- Tag -->
+  <rect x="60" y="80" width="180" height="28" rx="14" fill="#1E3A5F"/>
+  <text x="150" y="99" text-anchor="middle" font-size="12" font-weight="bold" fill="#60A5FA" letter-spacing="1">SYSTEMS ANALYSIS</text>
+
+  <!-- Main title -->
+  <text x="60" y="170" font-size="52" font-weight="bold" fill="#F8FAFC">Internal Ticket</text>
+  <text x="60" y="232" font-size="52" font-weight="bold" fill="#378ADD">Management</text>
+  <text x="60" y="294" font-size="52" font-weight="bold" fill="#F8FAFC">System</text>
+
+  <!-- Subtitle -->
+  <text x="60" y="340" font-size="16" fill="#94A3B8">Systems Prototyping · 1st semester · Computer Science</text>
+
+  <!-- Right side — tech badges -->
+  <!-- BPMN card -->
+  <rect x="720" y="60" width="160" height="80" rx="10" fill="#1E293B"/>
+  <rect x="720" y="60" width="160" height="4" rx="2" fill="#0F6E56"/>
+  <text x="800" y="104" text-anchor="middle" font-size="20" font-weight="bold" fill="#5DCAA5">BPMN</text>
+  <text x="800" y="124" text-anchor="middle" font-size="12" fill="#64748B">Process Modeling</text>
+
+  <!-- UML card -->
+  <rect x="900" y="60" width="160" height="80" rx="10" fill="#1E293B"/>
+  <rect x="900" y="60" width="160" height="4" rx="2" fill="#534AB7"/>
+  <text x="980" y="104" text-anchor="middle" font-size="20" font-weight="bold" fill="#AFA9EC">UML</text>
+  <text x="980" y="124" text-anchor="middle" font-size="12" fill="#64748B">System Modeling</text>
+
+  <!-- Figma card -->
+  <rect x="1080" y="60" width="160" height="80" rx="10" fill="#1E293B"/>
+  <rect x="1080" y="60" width="160" height="4" rx="2" fill="#993C1D"/>
+  <text x="1160" y="104" text-anchor="middle" font-size="20" font-weight="bold" fill="#F0997B">Figma</text>
+  <text x="1160" y="124" text-anchor="middle" font-size="12" fill="#64748B">Prototyping</text>
+
+  <!-- Stage cards -->
+  <rect x="720" y="165" width="520" height="70" rx="10" fill="#1E293B"/>
+  <text x="740" y="192" font-size="12" fill="#64748B">STAGES COMPLETED</text>
+  <text x="740" y="218" font-size="13" fill="#5DCAA5">✓  AS-IS Modeling</text>
+  <text x="870" y="218" font-size="13" fill="#5DCAA5">✓  Use Cases UML</text>
+  <text x="1000" y="218" font-size="13" fill="#5DCAA5">✓  Behavioral Diagrams</text>
+  <text x="1140" y="218" font-size="13" fill="#5DCAA5">✓  Prototype</text>
+
+  <!-- Prototype preview card -->
+  <rect x="720" y="255" width="520" height="110" rx="10" fill="#1E293B"/>
+  <rect x="720" y="255" width="3" height="110" rx="0" fill="#378ADD"/>
+  <text x="742" y="280" font-size="12" fill="#64748B">PROTOTYPE</text>
+  <text x="742" y="306" font-size="14" font-weight="bold" fill="#F8FAFC">6 navigable screens</text>
+  <text x="742" y="326" font-size="13" fill="#94A3B8">Login · Dashboard · Open Ticket · Track Status</text>
+  <text x="742" y="346" font-size="13" fill="#94A3B8">Attendant Queue · Ticket Details</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="390" width="1280" height="10" fill="#1E3A5F"/>
+
+</svg>
