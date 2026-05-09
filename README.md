@@ -129,15 +129,15 @@ Navigable low/medium fidelity prototype built in **Figma**, validated through a 
 
 ![Login](docs/prototype/01-login.png)
 
-![Dashboard](docs/prototype/02-dashboard-colaborador.png)
+![Employee Dashboard](docs/prototype/02-employee-dashboard.png)
 
-![Open Ticket](docs/prototype/03-abrir-chamado.png)
+![Open Ticket](docs/prototype/03-open-ticket.png)
 
-![Track Status](docs/prototype/04-acompanhar-status.png)
+![Track Status](docs/prototype/04-track-status.png)
 
-![Attendant Dashboard](docs/prototype/05-dashboard-atendente.png)
+![Attendant Dashboard](docs/prototype/05-attendant-dashboard.png)
 
-![Ticket Details](docs/prototype/06-detalhes-atendimento.png)
+![Ticket Details](docs/prototype/06-ticket-details.png)
 
 ### Usability Validation
 
@@ -193,11 +193,11 @@ internal-ticket-system/
 │   │   └── activity_diagram_uc1.svg
 │   └── prototype/
 │       ├── 01-login.png
-│       ├── 02-dashboard-colaborador.png
-│       ├── 03-abrir-chamado.png
-│       ├── 04-acompanhar-status.png
-│       ├── 05-dashboard-atendente.png
-│       └── 06-detalhes-atendimento.png
+│       ├── 02-employee-dashboard.png
+│       ├── 03-open-ticket.png
+│       ├── 04-track-status.png
+│       ├── 05-attendant-dashboard.png
+│       └── 06-ticket-details.png
 ├── banner.svg
 └── README.md
 ```
