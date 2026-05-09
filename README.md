@@ -1,220 +1,87 @@
-# 📊 Sistema de Gestão de Chamados Internos | Internal Ticket Management System
+![Banner](banner.svg)
 
-> 🇧🇷 Projeto desenvolvido na disciplina de **Prototipagem de Sistemas** — 1º semestre de Ciência da Computação.
-> 🇺🇸 Project developed in the **Systems Prototyping** course — 1st semester of Computer Science.
+# Internal Ticket Management System
 
----
+> Project developed in the **Systems Prototyping** course — 1st semester of Computer Science.
 
-## 🗺️ Progresso do Projeto | Project Progress
-
-| Etapa | Descrição | Status |
-|-------|-----------|--------|
-| I | Análise do Processo e Modelagem BPMN (AS-IS) | ✅ Concluída |
-| II | Modelagem UML — Casos de Uso e Especificação Textual | ✅ Concluída |
-| III | Modelagem UML — Sequência, Atividades e Interpretação | ✅ Concluída |
-| IV | Síntese, Reflexão e Entrega Final | 🔄 Em breve |
+![BPMN](https://img.shields.io/badge/BPMN-0F6E56?style=flat&logoColor=white)
+![UML](https://img.shields.io/badge/UML-534AB7?style=flat&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=figma&logoColor=white)
+![Status](https://img.shields.io/badge/status-completed-green?style=flat)
 
 ---
 
-# 🇧🇷 Português
+## 📌 About
 
-## 📌 Sobre o Projeto
-
-Este projeto simula o trabalho de um Analista de Sistemas em uma empresa fictícia de tecnologia. O objetivo foi analisar um processo organizacional com problemas reais, propor uma solução digital e modelar toda a arquitetura do sistema utilizando notações BPMN e UML.
+This project simulates the work of a Systems Analyst at a fictional technology company — **TechCorp Solutions**. The goal was to analyze a real organizational problem, propose a digital solution, model the entire system architecture using BPMN and UML, and build a navigable prototype validated with users.
 
 ---
 
-## ⚠️ Problema Identificado
+## ⚠️ Problem
 
-A organização analisada utilizava um processo manual e descentralizado para gerenciar solicitações internas, usando e-mails, mensagens e comunicação verbal. Isso gerava:
+The organization managed internal requests through a manual and decentralized process — emails, WhatsApp messages, and verbal communication. This caused:
 
-- Falta de controle das demandas
-- Perda de informações e retrabalho
-- Atrasos no atendimento
-- Baixa rastreabilidade
-- Stakeholders estratégicos sem visibilidade do processo
-
----
-
-## ✅ Etapa I — Modelagem do Processo Atual (AS-IS)
-
-Modelagem do processo atual utilizando **BPMN** com 6 raias representando cada stakeholder, evidenciando as falhas operacionais.
-
-### 👥 Stakeholders identificados
-
-| Stakeholder | Papel | Influência |
-|-------------|-------|------------|
-| Colaborador | Usuário final — abre solicitações | Média |
-| Equipe Suporte / TI | Atende e gerencia os chamados | Alta |
-| Gestor de Departamento | Supervisiona e aprova chamados | Alta |
-| Administrador do Sistema | Gerencia usuários e configurações | Alta |
-| Diretoria | Tomada de decisões estratégicas | Muito Alta |
-| RH / Qualidade | Análise de desempenho e melhoria contínua | Média |
-
-### 📊 Diagrama BPMN — Processo AS-IS
-
-![BPMN AS-IS](docs/diagrams/bpmn_as_is.png)
-
----
-
-## ✅ Etapa II — Modelagem UML: Casos de Uso e Especificação Textual
-
-Desenvolvimento do **Diagrama de Casos de Uso UML** representando o sistema proposto, com especificação textual detalhada dos principais casos de uso.
-
-### 🧩 Diagrama de Casos de Uso
-
-![Casos de Uso UML](docs/diagrams/use_case_diagram.svg)
-
-### 📋 Casos de Uso principais
-
-- Abrir solicitação / chamado interno
-- Acompanhar status em tempo real
-- Assumir e atualizar status do chamado
-- Encaminhar chamado para outro setor
-- Aprovar / rejeitar chamado
-- Visualizar dashboard gerencial / KPIs
-- Gerar e exportar relatórios
-- Gerenciar usuários e permissões
-- Configurar categorias e SLAs
-- Registrar log de auditoria *(«include»)*
-- Emitir alerta de SLA vencido *(«extend»)*
-
-### 📝 Especificação Textual
-
-| | UC1 — Abrir Solicitação | UC2 — Assumir Chamado |
-|--|------------------------|----------------------|
-| **Ator principal** | Colaborador | Equipe Suporte / TI |
-| **Pré-condição** | Usuário autenticado | Atendente autenticado e chamado na fila |
-| **Pós-condição** | Chamado registrado com protocolo único | Chamado atribuído e colaborador notificado |
-
----
-
-## ✅ Etapa III — Modelagem UML: Diagramas Comportamentais
-
-Modelagem estrutural e dinâmica do sistema com diagramas de classes, sequência e atividades.
-
-### 🏗️ Classes identificadas
-
-| Classe | Responsabilidade |
-|--------|-----------------|
-| `Colaborador` | Abre e acompanha chamados |
-| `Chamado` | Entidade central — armazena dados e gera protocolo |
-| `Atendente` | Assume, atualiza e resolve chamados |
-| `Notificacao` | Dispara alertas automáticos de status |
-| `Categoria` | Define tipo e SLA do chamado |
-| `HistoricoAtividade` | Registra todas as ações para auditoria |
-
-### 🔄 Diagrama de Sequência — UC1: Abrir Solicitação
-
-Representa a troca de mensagens entre objetos ao longo do tempo, com fragmento combinado `alt` para o fluxo de dados válidos e inválidos.
-
-![Diagrama de Sequência](docs/diagrams/sequence_diagram_uc1.svg)
-
-### 🔀 Diagrama de Atividades — UC1: Abrir Solicitação
-
-Representa o fluxo lógico de negócio com nós de ação, decisões e tratamento de exceções.
-
-![Diagrama de Atividades](docs/diagrams/activity_diagram_uc1.svg)
-
-### 🔗 Integração entre os modelos
-
-> O diagrama de classes define a estrutura — atributos e métodos disponíveis. O diagrama de sequência mostra como esses métodos são invocados entre objetos ao longo do tempo. O diagrama de atividades representa o mesmo fluxo na perspectiva das regras de negócio. Os três diagramas são complementares e consistentes entre si.
-
----
-
-## ⚙️ Requisitos do Sistema
-
-### ✅ Funcionais
-- Cadastro de chamados com protocolo automático
-- Acompanhamento de status em tempo real
-- Priorização automática por urgência
-- Atribuição de responsáveis
-- Registro de histórico completo
-- Notificações automáticas
-- Relatórios e KPIs gerenciais
-
-### 🔒 Não Funcionais
-- Desempenho (resposta < 2 segundos)
-- Segurança e controle de acesso
-- Usabilidade intuitiva
-- Disponibilidade mínima de 99%
-- Escalabilidade
-
----
-
-## 📁 Estrutura do Repositório
-
-```
-internal-ticket-system/
-├── docs/
-│   └── diagrams/
-│       ├── bpmn_as_is.svg                # Diagrama BPMN — Processo AS-IS
-│       ├── bpmn_as_is.png                # Versão PNG do BPMN
-│       ├── use_case_diagram.svg          # Diagrama de Casos de Uso UML
-│       ├── sequence_diagram_uc1.svg      # Diagrama de Sequência — UC1
-│       └── activity_diagram_uc1.svg      # Diagrama de Atividades — UC1
-└── README.md
-```
-
----
-
-## 📚 Aprendizados
-
-- Levantamento e análise de requisitos
-- Modelagem de processos com BPMN
-- Identificação e classificação de stakeholders
-- Modelagem UML: Casos de Uso, Classes, Sequência e Atividades
-- Especificação textual com fluxos principal, alternativo e de exceção
-- Integração entre modelos estruturais e comportamentais
-- Pensamento sistemático antes de codificar
-
----
----
-
-# 🇺🇸 English
-
-## 📌 About the Project
-
-This project simulates the work of a Systems Analyst at a fictional technology company. The goal was to analyze an organizational process with real problems, propose a digital solution, and model the entire system architecture using BPMN and UML notations.
-
----
-
-## ⚠️ Problem Identified
-
-The analyzed organization managed internal requests through a manual and decentralized process, relying on emails, messages, and verbal communication. This caused:
-
-- Lack of demand control and information loss
-- Rework and service delays
-- Low traceability
+- No demand control or traceability
+- Information loss and rework
+- Service delays
 - Strategic stakeholders with no process visibility
 
 ---
 
-## ✅ Stage I — Current Process Modeling (AS-IS)
+## 🗺️ Project Progress
 
-Current process modeled using **BPMN** with 6 swim lanes representing each stakeholder, highlighting operational failures.
+| Stage | Description | Status |
+|-------|-------------|--------|
+| I | Process Analysis and BPMN Modeling (AS-IS) | ✅ Done |
+| II | UML Modeling — Use Cases and Textual Specification | ✅ Done |
+| III | UML Modeling — Classes, Sequence and Activity Diagrams | ✅ Done |
+| IV | Functional Prototype and Usability Validation | ✅ Done |
 
-### 📊 BPMN Diagram — AS-IS Process
+---
+
+## ✅ Stage I — AS-IS Process Modeling (BPMN)
+
+Current process modeled using **BPMN** with 6 swim lanes, highlighting operational failures such as no integrated system, informal communication, and strategic stakeholders with no visibility.
+
+### Identified Stakeholders
+
+| Stakeholder | Role | Influence |
+|-------------|------|-----------|
+| Employee | End user — opens requests | Medium |
+| Support / IT Team | Handles and manages tickets | High |
+| Department Manager | Supervises and approves tickets | High |
+| System Administrator | Manages users and settings | High |
+| Board / Directors | Strategic decision-making | Very High |
+| HR / Quality | Performance analysis and improvement | Medium |
+
+### BPMN Diagram — AS-IS Process
 
 ![BPMN AS-IS](docs/diagrams/bpmn_as_is.png)
 
 ---
 
-## ✅ Stage II — UML Modeling: Use Cases and Textual Specification
+## ✅ Stage II — UML Modeling: Use Cases
 
-Development of the **UML Use Case Diagram** representing the proposed system, with detailed textual specification of the main use cases.
+**UML Use Case Diagram** representing the proposed digital system with 6 actors and 20 use cases, followed by detailed textual specification.
 
-### 🧩 Use Case Diagram
+### Use Case Diagram
 
 ![Use Case Diagram](docs/diagrams/use_case_diagram.svg)
+
+### Textual Specification
+
+| | UC1 — Open Request | UC2 — Take Ownership |
+|--|-------------------|---------------------|
+| **Primary actor** | Employee | Support / IT Team |
+| **Pre-condition** | User authenticated | Attendant authenticated, ticket in queue |
+| **Main flow** | Fill form → validate → generate protocol → notify | Take ticket → execute → record solution → close |
+| **Post-condition** | Ticket registered with unique protocol | Ticket assigned, history recorded, employee notified |
 
 ---
 
 ## ✅ Stage III — UML Modeling: Behavioral Diagrams
 
-Structural and dynamic modeling of the system with class, sequence, and activity diagrams.
-
-### 🏗️ Identified Classes
+### Identified Classes
 
 | Class | Responsibility |
 |-------|---------------|
@@ -225,17 +92,91 @@ Structural and dynamic modeling of the system with class, sequence, and activity
 | `Category` | Defines ticket type and SLA |
 | `ActivityLog` | Records all actions for audit trail |
 
-### 🔄 Sequence Diagram — UC1: Open Request
+### Sequence Diagram — UC1
 
 ![Sequence Diagram](docs/diagrams/sequence_diagram_uc1.svg)
 
-### 🔀 Activity Diagram — UC1: Open Request
+### Activity Diagram — UC1
 
 ![Activity Diagram](docs/diagrams/activity_diagram_uc1.svg)
 
-### 🔗 Model Integration
+### Model Integration
 
-> The class diagram defines the structure — available attributes and methods. The sequence diagram shows how those methods are invoked between objects over time. The activity diagram represents the same flow from a business rules perspective. All three diagrams are complementary and consistent with each other.
+> The class diagram defines structure — available attributes and methods. The sequence diagram shows how those methods are invoked between objects over time. The activity diagram represents the same flow from a business rules perspective. All three models are complementary and consistent with each other.
+
+---
+
+## ✅ Stage IV — Functional Prototype and Usability Validation
+
+Navigable low/medium fidelity prototype built in **Figma**, validated through a simulated usability test using the Think Aloud protocol.
+
+### 🔗 Access the Prototype
+
+> **[Open navigable prototype on Figma](https://www.figma.com/design/rjYi4jycqJjVOmnE57NvBc/SGPD---Sistema-de-Gest%C3%A3o-de-Chamados?node-id=0-1&t=Ptrnx2zOLsSoX5iu-1)**
+
+### Prototype Screens
+
+| Screen | Description |
+|--------|-------------|
+| 01 — Login | Authentication with corporate email and password |
+| 02 — Employee Dashboard | Overview of open, in-progress and closed tickets |
+| 03 — Open New Ticket | Form with title, category, description and urgency |
+| 04 — Track Ticket Status | Ticket details with update timeline |
+| 05 — Attendant Dashboard | Ticket queue with priority filters |
+| 06 — Ticket Details & Service | Take ownership, update status and record solution |
+
+### Screen Previews
+
+![Login](docs/prototype/01-login.png)
+
+![Dashboard](docs/prototype/02-dashboard-colaborador.png)
+
+![Open Ticket](docs/prototype/03-abrir-chamado.png)
+
+![Track Status](docs/prototype/04-acompanhar-status.png)
+
+![Attendant Dashboard](docs/prototype/05-dashboard-atendente.png)
+
+![Ticket Details](docs/prototype/06-detalhes-atendimento.png)
+
+### Usability Validation
+
+**Test persona:** Patrícia Oliveira Mendes, 28, HR Assistant — intermediate tech familiarity, first contact with a ticket management system.
+
+**Tasks evaluated:**
+1. Register a new internal request
+2. Check the status of an existing ticket
+3. Take ownership of a ticket as an attendant
+
+**Key findings:**
+- ✅ "Open new ticket" button found quickly — clear positioning
+- ✅ Attendant queue was considered organized and easy to scan
+- ⚠️ Category field caused hesitation — options needed clearer descriptions
+- ⚠️ Users expected a dedicated "My Tickets" tab instead of clicking from the dashboard
+
+**Proposed improvements:**
+1. Add short descriptions to each category option in the dropdown
+2. Add a "My Tickets" tab in the sidebar with a "View details" button on each ticket card
+3. Add tooltips to status options explaining the difference between "In progress" and "Waiting"
+
+---
+
+## ⚙️ System Requirements
+
+### Functional
+- Ticket registration with automatic protocol
+- Real-time status tracking
+- Automatic prioritization by urgency
+- Assignee management and history logging
+- Automatic notifications
+- Reports and management KPIs
+
+### Non-Functional
+- Performance (response < 2 seconds)
+- Security and access control
+- Intuitive usability
+- Minimum 99% availability
+- Scalability
 
 ---
 
@@ -244,12 +185,20 @@ Structural and dynamic modeling of the system with class, sequence, and activity
 ```
 internal-ticket-system/
 ├── docs/
-│   └── diagrams/
-│       ├── bpmn_as_is.svg                # BPMN Diagram — AS-IS Process
-│       ├── bpmn_as_is.png                # PNG version of BPMN
-│       ├── use_case_diagram.svg          # UML Use Case Diagram
-│       ├── sequence_diagram_uc1.svg      # Sequence Diagram — UC1
-│       └── activity_diagram_uc1.svg      # Activity Diagram — UC1
+│   ├── diagrams/
+│   │   ├── bpmn_as_is.svg
+│   │   ├── bpmn_as_is.png
+│   │   ├── use_case_diagram.svg
+│   │   ├── sequence_diagram_uc1.svg
+│   │   └── activity_diagram_uc1.svg
+│   └── prototype/
+│       ├── 01-login.png
+│       ├── 02-dashboard-colaborador.png
+│       ├── 03-abrir-chamado.png
+│       ├── 04-acompanhar-status.png
+│       ├── 05-dashboard-atendente.png
+│       └── 06-detalhes-atendimento.png
+├── banner.svg
 └── README.md
 ```
 
@@ -257,12 +206,12 @@ internal-ticket-system/
 
 ## 📚 Key Learnings
 
-- Requirements gathering and analysis
+- Requirements gathering and stakeholder analysis
 - Process modeling with BPMN
-- Stakeholder identification and classification
 - UML modeling: Use Cases, Classes, Sequence and Activity diagrams
-- Textual specification with main, alternative and exception flows
-- Integration between structural and behavioral models
+- Textual use case specification with exception flows
+- Interface prototyping with Figma
+- Usability testing and iterative improvement
 - Systematic thinking before coding
 
 ---
